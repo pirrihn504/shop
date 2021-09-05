@@ -22,8 +22,6 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
-                            </ul>
-                        </li>
                     </ul>
                     <form class="d-flex">
                         <button class="btn btn-outline-dark" type="submit">
@@ -56,27 +54,72 @@
                                 Add to cart
                             </button>
                             <!-- Prize section-->
-                            <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                            <input type="hidden" name="cmd" value="_s-xclick">
-                            <input type="hidden" name="hosted_button_id" value="QF6W2JQPMZL3U">
-                            <table>
-                            <tr><td><input type="hidden" name="on0" value="Subscription type">Subscription type</td></tr><tr><td><select name="os0">
-                                <option value="Basic">Basic $5.00 USD</option>
-                                <option value="Freemium">Freemium $10.00 USD</option>
-                                <option value="Premium">Premium $15.00 USD</option>
-                                <option value="Gold">Gold $20.00 USD</option>
-                                <option value="VIP">VIP $25.00 USD</option>
-                                <option value="Webmaster Basic">Webmaster Basic $30.00 USD</option>
-                                <option value="Webmaster Fremium">Webmaster Fremium $35.00 USD</option>
-                                <option value="Webmaster Premium">Webmaster Premium $40.00 USD</option>
-                                <option value="Webmaster Gold">Webmaster Gold $45.00 USD</option>
-                                <option value="Webmaster VIP">Webmaster VIP $50.00 USD</option>
-                            </select> </td></tr>
-                            </table>
-                            <input type="hidden" name="currency_code" value="USD">
-                            <input type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                            <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
-                            </form>
+                            
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                             
+                              <li class="nav-item">
+                                <a class="nav-link active" id="usd-tab" data-toggle="tab" href="#usd" role="tab" aria-controls="usd" aria-selected="true">Pay using USD</a>
+                              </li>
+                              
+                              <li class="nav-item">
+                                <a class="nav-link" id="eur-tab" data-toggle="tab" href="#eur" role="tab" aria-controls="eur" aria-selected="false">Pay using EUR</a>
+                              </li>
+                              
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                              <div class="tab-pane fade show active" id="usd" role="tabpanel" aria-labelledby="usd-tab">
+                                  
+                                  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                                    <input type="hidden" name="cmd" value="_s-xclick">
+                                    <input type="hidden" name="hosted_button_id" value="QF6W2JQPMZL3U">
+                                    <table>
+                                    <tr><td><input type="hidden" name="on0" value="Subscription type">Subscription type</td></tr><tr><td><select name="os0">
+                                        <option value="Basic">Basic $5.00 USD</option>
+                                        <option value="Freemium">Freemium $10.00 USD</option>
+                                        <option value="Premium">Premium $15.00 USD</option>
+                                        <option value="Gold">Gold $20.00 USD</option>
+                                        <option value="VIP">VIP $25.00 USD</option>
+                                        <option value="Webmaster Basic">Webmaster Basic $30.00 USD</option>
+                                        <option value="Webmaster Fremium">Webmaster Fremium $35.00 USD</option>
+                                        <option value="Webmaster Premium">Webmaster Premium $40.00 USD</option>
+                                        <option value="Webmaster Gold">Webmaster Gold $45.00 USD</option>
+                                        <option value="Webmaster VIP">Webmaster VIP $50.00 USD</option>
+                                    </select> </td></tr>
+                                    </table>
+                                    <input type="hidden" name="currency_code" value="USD">
+                                    <input type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_buynowCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                                    <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+                                    </form>
+                                  
+                              </div>
+                              
+                              <div class="tab-pane fade" id="eur" role="tabpanel" aria-labelledby="eur-tab">
+                                  
+                                  <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                                    <input type="hidden" name="cmd" value="_s-xclick">
+                                    <input type="hidden" name="hosted_button_id" value="UKH5E2ZD827JA">
+                                    <table>
+                                    <tr><td><input type="hidden" name="on0" value=""></td></tr><tr><td><select name="os0">
+                                        <option value="Básico">Básico : €5.00 EUR - mensual</option>
+                                        <option value="Freemium">Freemium : €10.00 EUR - mensual</option>
+                                        <option value="Premium">Premium : €15.00 EUR - mensual</option>
+                                        <option value="Gold">Gold : €20.00 EUR - mensual</option>
+                                        <option value="VIP">VIP : €25.00 EUR - mensual</option>
+                                        <option value="Webmaster Básico">Webmaster Básico : €30.00 EUR - mensual</option>
+                                        <option value="Webmaster Freemium">Webmaster Freemium : €35.00 EUR - mensual</option>
+                                        <option value="Webmaster Premium">Webmaster Premium : €40.00 EUR - mensual</option>
+                                        <option value="Webmaster Gold">Webmaster Gold : €45.00 EUR - mensual</option>
+                                        <option value="Webmaster VIP">Webmaster VIP : €50.00 EUR - mensual</option>
+                                    </select> </td></tr>
+                                    </table>
+                                    <input type="hidden" name="currency_code" value="EUR">
+                                    <input type="image" src="https://www.paypalobjects.com/es_XC/i/btn/btn_subscribeCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                                    <img alt="" border="0" src="https://www.paypalobjects.com/es_XC/i/scr/pixel.gif" width="1" height="1">
+                                    </form>
+
+                                  
+                              </div>
+                            </div>
 
 
 
@@ -207,7 +250,9 @@
             <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Your Website 2021</p></div>
         </footer>
         <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
     </body>
